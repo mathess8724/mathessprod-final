@@ -1,0 +1,42 @@
+@import'/src/styles.scss';
+@import'/src/palette.scss';
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+
+}
+
+
+.mat-toolbar.mat-primary {
+  background-color: $primary-color-dark;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+@media (min-width: 768px)
+{
+  .sidenav{
+    display: none;
+  }
+}
+
+.spacer{
+  flex: 1 1 auto;
+}
+mat-toolbar a{
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 556px){
+  mat-toolbar a{
+    display: none;
+  }
+}
