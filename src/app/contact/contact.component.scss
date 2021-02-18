@@ -1,7 +1,7 @@
 @import '/src/palette.scss';
 
 .primary-background{
-    background-color: $primary-color;
+    background-color: $divider-color
 }
 .contactImg
 {
@@ -9,4 +9,15 @@
     background-image: url('../../assets/img/banner-contact.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+@media (min-width: 900px){
+    mat-card {
+        width: 600px;
+        margin-bottom: 30px;
+       
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+    }
 }
