@@ -22,7 +22,7 @@
         <textarea [formControl]="msg" matInput placeholder="Ex. It makes me feel..." 
                     style="min-height: 110px;"></textarea>
       </mat-form-field>     
-      <button disabled="{{ loading }}" *ngIf="!mailSent && !error" mat-raised-button color="primary">Send</button>
+      <button class="contactButton" disabled="{{ loading }}" *ngIf="!mailSent && !error" mat-raised-button color="primary">Send</button>
       <button class="popupButton"  *ngIf="mailSent" mat-raised-button color="accent">message sent !</button>
       <button class="popupButton"  *ngIf="error" mat-raised-button color="warn">Ooops, mail not sent!</button>
     </form>

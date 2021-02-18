@@ -1,4 +1,7 @@
+@import '/src/palette.scss';
 .popupButton
 {
     transition: 1s;
+}.contactButton{
+    background-color: $primary-color-dark;
 }
