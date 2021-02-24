@@ -5,6 +5,7 @@ import { ReCaptchaV3Service } from 'ng-recaptcha';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import axios from 'axios';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -18,7 +19,9 @@ export class ContactComponent implements OnInit {
   currentCaptcha : null;
   
 
-  constructor( private recaptchaV3Service: ReCaptchaV3Service,) { }
+  constructor( private recaptchaV3Service: ReCaptchaV3Service,private titleService:Title) {
+    this.titleService.setTitle('Contact');
+   }
 
   ngOnInit(): void {
   }

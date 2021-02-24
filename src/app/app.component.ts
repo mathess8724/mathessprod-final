@@ -15,7 +15,7 @@ import  "firebase/analytics";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'mathessprod';
+  
   
   ngOnInit(): void {
     firebase.initializeApp(fbcfg);

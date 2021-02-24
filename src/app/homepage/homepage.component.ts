@@ -2,6 +2,8 @@ import { Component, OnInit , Input} from '@angular/core';
 import { ContactComponent } from '../contact/contact.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { NotFoundComponent } from '../not-found/not-found.component';
+import {Title} from "@angular/platform-browser";
+
 
 @Component({
   selector: 'app-homepage',
@@ -11,9 +13,12 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 export class HomepageComponent implements OnInit {
 
   
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private titleService:Title) {
+    this.titleService.setTitle('Homepage');
+  }
+  
   @Input() ngStyle: { [klass: string]: any; } | undefined;
-  title = 'Homepage'
+  //title = 'Homepage'
   contactPage = ContactComponent;
   
   getWelcomePicUrl = () => {
